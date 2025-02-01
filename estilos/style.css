@@ -11,71 +11,83 @@
     --cor6: hsl(0, 0%, 75%);
     
     
-  --fonte-destaque:'Raleway' cursive;
-  --fonte-padrao: 'Headings, Call-to-actions, Header Navigation'
+  --fonte-destaque:'Raleway';
+  --fonte-padrao:'Headings, Call-to-actions, Header Navigation';
 }
 
 
 
 *{
-  
   margin:0;
   padding:0;
-  
+  box-sizing: border-box;
 }
-
-body{
-  height: 100vh;
+.clear{
+  clear: both;
+}
+ html, body {
+   width: 100%;
+  height: 100%;
   font-family: var(--fonte-destaque);
+  overflow: none;
 }
 
 h1{
+  text-align: center;
   color: var(--cor1);
   margin: 20px;
+  font-weight:bold;
 }
 p{ 
   color: var(--cor1);
   font-family: var(--fonte-padrao);
+  font-size: 17px;
   margin: 20px;
-  text-align: left;
+  line-height: 25px;
+}
+
+
+header {
+  width: 100%;
+  height: 20%
+  max-width: 120px;
+  padding: 30px;
+  
+}
+.topo{
+ 
+  display: flex;
+flex-flow: row;
+align-items: center;
+justify-content: space-between;
 }
 
 main{
-  margin-top: 10em;
+  margin-top: 100px;
+  
+}
+
+.fylo img{
+  
+  width: 100px;
+  
+}
+
+nav a{
+  text-decoration: none;
+  color:var(--cor1);
+  margin: 20px;
+  
+}
+
+form{
+  display: block;
   text-align: center;
 }
 
-header{
-   margin-top: 30px;
-  display: flex;
-  flex-flow: row
-  
-  
-}
-.fylo{
-   width: 50%;
-}
-.fylo img{
-  width: 100px;
-  padding-left: 20px;
-}
-
-
-menu{
- 
-  width: 50%;
-  text-align: right;
-  
-}
-menu a{
-  padding:10px;
-  text-decoration: none;
-  color:var(--cor1);
-}
-
-
 
 #button{
+  
   background: var(--cor3);
   color: white;
   margin: 10px;
@@ -88,10 +100,11 @@ menu a{
   font-weight: bold;
 }
 
-#Email{
+form input[type=email]{
+  border: 1px solid var(--cor1);
   margin: 7px;
-  width: 10.5cm;
-  padding:10px;
+  width: 420px;
+  padding:25px;
   height: 30px;
 }
 input::placeholder{
@@ -100,52 +113,119 @@ input::placeholder{
 
 
 
-.curve{
-  width: 98vw;
+#curve1{
+  padding-top: 5cm;
+  display: block;
+  width: 100vw;
   background-color: white;
 }
+#curve2{
+  display: none;
+}
 
-.parte2{
-  background-color: var(--cor5);
-}
-.parte2 h1{
-   margin: 4cm 0 1cm 0;
-}
-.parte2 p{
-  
-  color:gray;
-}
-.parte1{
-  padding-bottom: 150px;
-  background-color:white;
-}
-.parte1 h1,{
-  font-size: 2em;
-}
-.parte1 p{
+#imgmob, #mob2{
   text-align: center;
 }
 
+.foto{
+  max-width: 500px;
+}
+
+.container-2{
+  text-align: center;
+  background-color: var(--cor5);
+  
+}
+.container-2 h1{
+  padding:20% 0 20px 0;
+  
+}
+
+.container-2 p{
+  font-family: var(--fonte-padrao);
+  text-align: left;
+  color:gray;
+}
+
+.container-1{
+  text-align: center;
+  background-color:white;
+}
+.container-1 h1{
+  
+  font-size: 34px;
+  padding: 20px 0 20px 0;
+}
+
+
+
+.img-desktop, #curve2, #desktop2{
+  display: none;
+}
+
+
+
+.link-fylo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .linkverde{
+   font-weight: normal;
+   font-family:var(--fonte-padrao);
+  position: relative;
+    text-decoration:none;
+  color:var(--cor4);
+}
+.linkverde:hover{
+  color: hsla(170, 59%, 61%, 1);;
+}
+
+.linkverde::after{
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  bottom:0;
+  width: 110%;
+  height: 2px;
+  background-color: hsla(170, 45%, 43%);
+  transition: width 0.3s ease;
+}
+
+
+
+.link-fylo img{
+  width: 25px;
+  
+}
 
 .caixa{
   background: var(--cor5);
   display: flex;
-  padding-top: 5em;
-  padding-bottom: 20em;
   justify-content: center;
   align-items: center;
   text-align:center;
 }
 
 .conteudo{
-  
- padding: 30px;
+ 
+ padding: 30px 30px 15px 30px;
  background: white;
  width: 400px;
+ margin:2cm 0px 5cm 0px;
  border-radius: 5px;
  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.32);
- 
 }
+.conteudo p{
+  color: var(--cor1);
+  text-align: justify;
+  font-size: 13.5px;
+  line-height: 20px;
+  
+}
+
 .quotes{
   display: flex;
   justify-content: flex-start;
@@ -160,9 +240,9 @@ input::placeholder{
 
 .Avatar img{
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: -10px;
+  width: 40px;
+  height: 40px;
+  margin-right: -5px;
   
 }
 
@@ -170,31 +250,32 @@ input::placeholder{
   
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px;
-}
-
-.info h1{
-  font-size: 10px;
-  margin-bottom: -15px;
+  align-items:flex-start;
   
 }
 
-.info h1,p{
-  
-  text-align: left;
+.info{
+ text-align: left;
 }
+
+.info span{
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 13px;
+  color: var(--cor1);
+}
+
 
 .info p{
-  
+  margin-top: 0px;
   font-size: 9px;
   
 }
 
-
-
 aside{
+  
+  text-align: center;
   height: 13cm; 
-  padding: 30px;
   color:white;
   background: var(--cor2);
 }
@@ -204,8 +285,10 @@ aside h3{
 }
 
 aside p{
+  
   color: white;
   padding: 20px;
+  
 }
 #button2{
   background: var(--cor3);
@@ -220,26 +303,19 @@ aside p{
   font-weight: bold;
 }
 #Email2{
+  border: 1px solid var(--cor1);
   margin: 7px;
-  width: 8.5cm;
-  padding:10px;
+  width: 340px;
+  padding:25px;
   height: 30px;
 }
 
 
 
-main p{
-  paddin-top:50px;
-  
-}
-main a{
-  text-decoration:none;
-  color:hsla(170, 45%, 43%) ;
-}
-
 footer{
+  
   padding: 50px;
-  height: 700px;
+  height: 800px;
   color: white;
   background: var(--cor1);
 }
@@ -250,48 +326,42 @@ footer p{
 
 #fylo{
   width:250px;
-  
+  padding-left:15px;
+  padding-bottom: 30px;
 }
 
 
 #contato{ 
-  
   padding: 20px;
 }
 #contato p{
-  padding:10px;
+  padding:15px;
   color: white;
 }
-#contato img{
-  padding-right: 15px;
-}
-
-
-#coluna1{
-  padding-top: 30px;
-  display: flex;
-  flex-flow: column;
-}
-
-
-
-#coluna1 a{
+footer ul{
   
-  color: white;
-  text-decoration: none;
-  padding: 15px;
-}
-
-#coluna2{
-  padding: 30px 0px 30px 0px;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 }
-#coluna2 a{
-  padding: 15px;
-  text-decoration: none;
+footer ul li{
+
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+footer ul a{
   color: white;
+  text-decoration: none;
 }
+footer ul a:hover{
+  color: var(--cor2);
+}
+footer ul img{
+  margin-right: 10px;
+}
+
+  
+
 
 
 .midias{
@@ -301,10 +371,9 @@ footer p{
   
 }
 
-
 .rede img{
    padding: 5px;
-  width: 30px;
+  width: 38px;
   
 }
 .rede a{
